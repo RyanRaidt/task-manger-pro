@@ -12,7 +12,15 @@ const taskRoutes = require("./routes/taskRoutes");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(
+  cors({
+    origin: [
+      "https://ryan-task-manger-pro.netlify.app",
+      "http://localhost:5173",
+    ],
+    credentials: true,
+  })
+);
 app.use(helmet());
 app.use(morgan("dev"));
 app.use(express.json());
