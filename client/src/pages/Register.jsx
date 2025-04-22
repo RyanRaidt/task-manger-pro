@@ -43,7 +43,7 @@ const Register = () => {
         duration: 3000,
         isClosable: true,
       });
-      navigate("/dashboard");
+      navigate("/");
     } catch (error) {
       toast({
         title: "Registration failed",
