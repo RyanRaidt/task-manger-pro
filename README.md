@@ -129,4 +129,4 @@ The application can be deployed using:
 ## Contact
 
 Ryan Raidt - ryanraidt1026@gmail.com
-Project Link: https://github.com/RyanRaidt/task-manger-pro
+Project Link: https://ryan-task-manger-pro.netlify.app/
