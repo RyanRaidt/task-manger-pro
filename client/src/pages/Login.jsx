@@ -33,8 +33,6 @@ const Login = () => {
         formData
       );
       localStorage.setItem("token", res.data.token);
-      // Force a reload to update the Navbar state
-      window.location.reload();
       toast({
         title: "Login successful",
         status: "success",

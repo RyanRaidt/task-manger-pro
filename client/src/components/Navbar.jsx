@@ -20,6 +20,15 @@ const Navbar = () => {
   useEffect(() => {
     const token = localStorage.getItem("token");
     setIsLoggedIn(!!token);
+
+    // Listen for auth state changes
+    const handleAuthChange = () => {
+      const token = localStorage.getItem("token");
+      setIsLoggedIn(!!token);
+    };
+
+    window.addEventListener("storage", handleAuthChange);
+    return () => window.removeEventListener("storage", handleAuthChange);
   }, []);
 
   const handleLogout = () => {
@@ -86,6 +95,7 @@ const Navbar = () => {
                 as={RouterLink}
                 to="/register"
                 colorScheme="whiteAlpha"
+                variant="ghost"
                 _hover={{ bg: "whiteAlpha.200" }}
               >
                 Register
